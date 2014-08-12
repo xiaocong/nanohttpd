@@ -471,7 +471,7 @@ public abstract class NanoHTTPD {
      * request).</p>
      */
     public static class DefaultTempFileManager implements TempFileManager {
-        private final String tmpdir;
+        private String tmpdir;
         private final List<TempFile> tempFiles;
 
         public DefaultTempFileManager() {
