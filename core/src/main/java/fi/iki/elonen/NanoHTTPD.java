@@ -476,6 +476,8 @@ public abstract class NanoHTTPD {
 
         public DefaultTempFileManager() {
             tmpdir = System.getProperty("java.io.tmpdir");
+            if (tmpdir.equals("/tmp"))
+                tmpdir = "/data/local/tmp";
             tempFiles = new ArrayList<TempFile>();
         }
 
